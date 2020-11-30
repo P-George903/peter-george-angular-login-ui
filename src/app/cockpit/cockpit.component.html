@@ -1,0 +1,36 @@
+<div class="container">
+<div class="row">
+    <div class="col-xs-12">
+      <!-- <p>Login Routing Field!</p>
+      <label>Server Name</label>
+      <input type="text" class="form-control" [(ngModel)]="newServerName">
+      <label>Server Email</label>
+      <input type="text" class="form-control" [(ngModel)]="newServerEmail">
+      <label>Server Content</label>
+      <input type="text" class="form-control" [(ngModel)]="newServerContent">
+      <label>Date of Birth</label>
+      <input type="text" class="form-control" [(ngModel)]="newServerDate"> -->
+      <p>Login Routing Field!</p>
+      <form [formGroup]="loginForm"> 
+        <label>Email</label>
+        <input formControlName="email" type="email" class="form-control" [(ngModel)]="newServerEmail">
+        <p>{{userData}}</p>
+          <label>First Name</label>
+          <input formControlName="firstName" type="text" class="form-control" [(ngModel)]="newServerContent">
+        
+          <label>Last Name</label>
+          <input formControlName="lastName" type="text" class="form-control" [(ngModel)]="newServerName">
+          
+          <label>Birthday</label>
+          <input formControlName="birthDay" type="date" class="form-control" [(ngModel)]="newServerDate">
+      </form>
+      <br>
+      <button
+        class="btn btn-primary"
+        (click)="onAddServer()"
+
+        [disabled]="!loginForm.valid">Login</button>
+      
+    </div>
+  </div>
+</div>
