@@ -12,12 +12,12 @@ export class CockpitComponent implements OnInit {
 
   
 
-  @Output()serverCreated= new EventEmitter<{serverName: string, serverContent: string, serverEmail: string, serverDate: string}>();
+  // @Output()serverCreated= new EventEmitter<{serverName: string, serverContent: string, serverEmail: string, serverDate: string}>();
  
-  newServerName = '';
-  newServerContent = '';
-  newServerEmail = '';
-  newServerDate = ''
+  // newServerName = '';
+  // newServerContent = '';
+  // newServerEmail = '';
+  // newServerDate = ''
   constructor(private readonly fb: FormBuilder, private readonly router: Router){
     this.loginForm = this.fb.group({
       email: [null, [Validators.required]],
@@ -37,13 +37,13 @@ queryParams:this.loginForm.value
   })
 
   
-  this.serverCreated.emit({
-    serverName: this.newServerName, 
-    serverContent: this.newServerContent,
-    serverEmail: this.newServerEmail,
-    serverDate: this.newServerDate
+  // this.serverCreated.emit({
+  //   serverName: this.newServerName, 
+  //   serverContent: this.newServerContent,
+  //   serverEmail: this.newServerEmail,
+  //   serverDate: this.newServerDate
     
-  })
+  // })
 }
  
 
