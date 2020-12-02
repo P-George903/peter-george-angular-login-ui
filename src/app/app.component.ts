@@ -7,17 +7,17 @@ import { FormGroup, FormBuilder, Validators} from '@angular/forms'
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  serverElements = [];
+  // serverElements = [];
   
   
-  onServerAdded(serverData: {serverName: string, serverContent: string, serverEmail: string, serverDate: string }) {
-    this.serverElements.push({
-      type: 'server',
-      name: serverData.serverName,
-      content: serverData.serverContent,
-      email: serverData.serverEmail,
-      date: serverData.serverDate
-    });
-  }
+  // onServerAdded(serverData: {serverName: string, serverContent: string, serverEmail: string, serverDate: string }) {
+  //   this.serverElements.push({
+  //     type: 'server',
+  //     name: serverData.serverName,
+  //     content: serverData.serverContent,
+  //     email: serverData.serverEmail,
+  //     date: serverData.serverDate
+  //   });
+  // }
 
 }
